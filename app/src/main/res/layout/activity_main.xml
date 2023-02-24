@@ -33,7 +33,7 @@
         android:textColor="@color/primary"
         android:text="Start Quiz"
         android:textSize="22sp"
-        android:textStyle="italic" />
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
