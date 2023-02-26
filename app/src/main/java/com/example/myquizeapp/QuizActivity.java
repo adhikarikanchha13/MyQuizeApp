@@ -7,9 +7,13 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.os.Handler;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -20,7 +24,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
   TextView questionTextView;
   Button ansA, ansB, ansC, ansD;
   Button submitBtn;
-
+  String timeLeftFormatted;
   int score = 0;
   int totalQuestion = QuestionAnswer.question.length;
   int currentQuestionIndex = 0;
@@ -65,6 +69,8 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
 
     loadNewQuestion();
 
+    // toast
+
     //        countdown
 
     mTextViewCountDown = findViewById(R.id.text_view_countdown);
@@ -92,15 +98,13 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     mTimerRunning = true;
   }
 
-
-  
   //    update timer
 
   private void updateCountDownText() {
     int minutes = (int) (mTimeLeftInMillis / 1000) / 60;
     int seconds = (int) (mTimeLeftInMillis / 1000) % 60;
 
-    String timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
+    timeLeftFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
 
     mTextViewCountDown.setText(timeLeftFormatted);
   }
@@ -157,19 +161,48 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     String passStatus = "";
     if (score > totalQuestion * 0.60) {
       passStatus = "Passed";
+
+      Toast toast = new Toast(getApplicationContext());
+      View getToastView =
+              getLayoutInflater()
+                      .inflate(R.layout.pass_layout, (ViewGroup) findViewById(R.id.toastViewGroup));
+      toast.setView(getToastView);
+      TextView tvMessage = getToastView.findViewById(R.id.tvToastSuccess);
+
+      tvMessage.setText(passStatus+". Your score is:"+score+" out of "+ totalQuestion );
+
+      toast.setDuration(Toast.LENGTH_LONG);
+      toast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.TOP, 0, -100);
+      toast.show();
+
+
+
     } else {
-      passStatus = "Failed! Try again";
+      passStatus = "Failed! Try again";  Toast toast = new Toast(getApplicationContext());
+      View getToastView =
+              getLayoutInflater()
+                      .inflate(R.layout.custom_toast_layout, (ViewGroup) findViewById(R.id.toastViewGroup));
+      toast.setView(getToastView);
+      TextView tvMessage = getToastView.findViewById(R.id.tvToastWarning);
+
+      tvMessage.setText(passStatus+". Your score is:"+score+" out of "+ totalQuestion);
+
+      toast.setDuration(Toast.LENGTH_LONG);
+      toast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.TOP, 0, -100);
+      toast.show();
+      // toast
+
     }
 
-    new AlertDialog.Builder(this)
-        .setTitle(passStatus)
-        .setMessage("Score is " + score + " Out of" + totalQuestion)
-        .setPositiveButton("Restart", (dialogInterface, i) -> restartQuiz())
-        .setCancelable(false)
-        .show();
-
-    Intent iFinish = new Intent(QuizActivity.this, MainActivity.class);
-    startActivity(iFinish);
+    new Handler()
+        .postDelayed(
+            new Runnable() {
+              @Override
+              public void run() {
+                finish();
+              }
+            },
+            2000);
   }
 
   void restartQuiz() {
