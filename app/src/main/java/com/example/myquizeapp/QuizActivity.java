@@ -169,7 +169,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
       toast.setView(getToastView);
       TextView tvMessage = getToastView.findViewById(R.id.tvToastSuccess);
 
-      tvMessage.setText(passStatus+". Your score is:"+score+" out of "+ totalQuestion );
+      tvMessage.setText(passStatus +". Your score is: "+ score +" out of "+ totalQuestion );
 
       toast.setDuration(Toast.LENGTH_LONG);
       toast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.TOP, 0, -100);
@@ -185,7 +185,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
       toast.setView(getToastView);
       TextView tvMessage = getToastView.findViewById(R.id.tvToastWarning);
 
-      tvMessage.setText(passStatus+". Your score is:"+score+" out of "+ totalQuestion);
+      tvMessage.setText(passStatus +". Your score is: "+ score +" out of "+ totalQuestion );
 
       toast.setDuration(Toast.LENGTH_LONG);
       toast.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.TOP, 0, -100);

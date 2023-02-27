@@ -15,6 +15,7 @@
         android:text="Total Questions "
         android:layout_alignParentLeft="true"
         android:textSize="23dp"
+        android:fontFamily="@font/comfort"
         android:textColor="@color/white"/>
 
     <TextView
@@ -24,6 +25,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="00:00"
+        android:fontFamily="@font/comfort"
         android:textColor="@android:color/white"
         android:textSize="40sp" />
 
@@ -37,6 +39,7 @@
         android:text="This will be the Questions "
         android:textColor="@color/white"
         android:textSize="20dp"
+        android:fontFamily="@font/montserrat"
         android:textAlignment="center"
         android:layout_margin="1dp"
         android:layout_above="@id/choices_layout"/>
@@ -58,6 +61,8 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/white"
             android:text="Ans A"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
             android:textColor="@color/black"/>
 
         <Button
@@ -67,6 +72,8 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/white"
             android:text="Ans B"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
             android:textColor="@color/black"/>
 
         <Button
@@ -76,6 +83,8 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/white"
             android:text="Ans C"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
             android:textColor="@color/black"/>
 
         <Button
@@ -85,6 +94,8 @@
             android:layout_margin="5dp"
             android:backgroundTint="@color/white"
             android:text="Ans D"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat"
             android:textColor="@color/black"/>
 
     </LinearLayout>
@@ -98,7 +109,10 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="40dp"
-        android:text="Submit" />
+        android:fontFamily="@font/montserrat"
+        android:text="Submit"
+        android:background="@color/purple_300"
+        android:textStyle="bold"/>
 
 
 </RelativeLayout>

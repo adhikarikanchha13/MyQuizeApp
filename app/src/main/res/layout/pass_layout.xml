@@ -26,6 +26,7 @@
         android:textSize="22sp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:fontFamily="@font/montserrat"
         android:textAlignment="center"
         />
 

@@ -15,8 +15,9 @@
         android:id="@+id/appName"
         android:layout_centerHorizontal="true"
         android:textSize="40sp"
+        android:fontFamily="@font/comfort"
         android:textColor="@color/white"
-        android:textStyle="italic|bold"
+        android:textStyle="bold"
         android:layout_marginTop="120dp"/>
 
 
@@ -32,8 +33,9 @@
         android:backgroundTint="@color/light_white"
         android:textColor="@color/primary"
         android:text="Start Quiz"
+        android:fontFamily="@font/comfort"
         android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textStyle="italic" />
 
 
 </RelativeLayout>
