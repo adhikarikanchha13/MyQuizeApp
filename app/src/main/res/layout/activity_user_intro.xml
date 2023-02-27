@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserIntroActivity"
+    android:orientation="vertical"
+    android:background="@color/primary"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Quiz App"
+        android:id="@+id/appName"
+        android:textSize="40sp"
+        android:fontFamily="@font/comfort"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="120dp"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/userName"
+        android:textColor="@color/white"
+        android:textColorHint="#B4B4B4"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:fontFamily="@font/comfort"
+        android:layout_marginTop="50dp"
+        android:ems="15"
+        />
+
+    <Button
+        android:id="@+id/btnEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        style="?android:attr/buttonBarButtonStyle"
+        android:textColor="@color/white"
+        />
+
+
+</LinearLayout>
