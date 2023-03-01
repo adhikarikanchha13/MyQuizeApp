@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".OpeningActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/quiz"
+        android:layout_marginVertical="5dp"
+        android:contentDescription="logo"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comfort"
+        android:text="My Quiz App"
+        android:textSize="36sp"
+
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textStyle="bold"
+
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="© Developed by Prajwal Adhikari"
+        android:textSize="14sp"
+        android:fontFamily="@font/comfort"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textStyle="italic"
+
+        />
+
+    <ProgressBar
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="5dp"
+        android:indeterminateTint="@color/light_white"
+        android:layout_margin="16dp"/>
+
+
+
+
+
+
+</LinearLayout>

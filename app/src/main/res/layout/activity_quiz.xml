@@ -96,7 +96,9 @@
             android:text="Ans D"
             android:textStyle="bold"
             android:fontFamily="@font/montserrat"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+
+            />
 
     </LinearLayout>
 
@@ -111,7 +113,7 @@
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/montserrat"
         android:text="Submit"
-        android:background="@color/purple_300"
+        android:backgroundTint="#0089B3"
         android:textStyle="bold"/>
 
 
